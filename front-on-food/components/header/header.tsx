@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-import { IconBookmark, IconHome } from '@icons';
+import { IconBookmark } from '@icons';
 
 import Styles from './header.module.css';
 
@@ -27,7 +27,7 @@ function Header() {
 					<li>
 						<Link href="/">
 							<a>
-								<IconHome />
+								<IconBookmark />
 								Home
 							</a>
 						</Link>

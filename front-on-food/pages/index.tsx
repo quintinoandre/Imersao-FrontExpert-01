@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 
-import { PageTemplate, Search } from '@components';
+import { Dish, PageTemplate, Search } from '@components';
 
 const Home: NextPage = () => {
 	return (
@@ -18,6 +18,7 @@ const Home: NextPage = () => {
 				<h2>
 					Discover your new favorite Delivery.Thousands of options at one click.
 				</h2>
+				<Dish />
 			</PageTemplate>
 		</>
 	);
