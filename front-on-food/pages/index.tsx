@@ -2,7 +2,9 @@ import type { NextPage } from 'next';
 import Head from 'next/head';
 import React from 'react';
 
-import { Dish, PageTemplate, Search } from '@components';
+import { Character, PageTemplate, Search } from '@components';
+
+import Styles from '../styles/internals.module.css';
 
 const Home: NextPage = () => {
 	return (
@@ -13,12 +15,15 @@ const Home: NextPage = () => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<PageTemplate>
-				<h1>Find options in Delivery near you.</h1>
-				<Search />
-				<h2>
-					Discover your new favorite Delivery.Thousands of options at one click.
-				</h2>
-				<Dish />
+				<div className={Styles.content}>
+					<h1>Find options in Delivery near you.</h1>
+					<Search />
+					<h2>
+						Discover your new favorite Delivery. Thousands of options at one
+						click.
+					</h2>
+					<Character />
+				</div>
 			</PageTemplate>
 		</>
 	);
