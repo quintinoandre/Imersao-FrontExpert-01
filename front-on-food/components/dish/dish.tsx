@@ -14,6 +14,7 @@ function Dish() {
 					alt="Dish"
 					width={592}
 					height={312}
+					layout="responsive"
 				/>
 			</div>
 			<div className={Styles.header}>
