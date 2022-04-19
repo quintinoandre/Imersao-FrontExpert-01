@@ -1,4 +1,4 @@
-import { useRouter } from 'next/router';
+import Head from 'next/head';
 import React from 'react';
 
 import { PageTemplate, DishList } from '@components';
@@ -9,15 +9,25 @@ import Styles from '../../styles/discover.module.css';
 
 function Discover({ ...props }: PageDiscoverProps) {
 	return (
-		<PageTemplate>
-			<div className={Styles.content}>
-				<h1>Options in the region of {props.city.name}</h1>
-				<p>We have found {props.city.catalogEstimated} options</p>
-				<div className={Styles.items}>
-					<DishList citySlug={props.city.slug} />
+		<>
+			<Head>
+				<title>Options in {props.city.name} - OnFood App</title>
+				<meta
+					name="description"
+					content={`Find options in Delivery near you in ${props.city.name}`}
+				/>
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<PageTemplate>
+				<div className={Styles.content}>
+					<h1>Options in the region of {props.city.name}</h1>
+					<p>We have found {props.city.catalogEstimated} options</p>
+					<div className={Styles.items}>
+						<DishList citySlug={props.city.slug} />
+					</div>
 				</div>
-			</div>
-		</PageTemplate>
+			</PageTemplate>
+		</>
 	);
 }
 
